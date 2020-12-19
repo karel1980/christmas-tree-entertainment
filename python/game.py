@@ -29,8 +29,16 @@ def find_nearest(lights, pos):
 
     return nearest
 
-def main():
+def load_lights(filename, include_disabled = False):
     lights = json.load(open(sys.argv[1]))
+
+    if include_disabled:
+      return lights
+
+    return [ l for l in lights if l['x'] is not None ]
+
+def main():
+    lights = load_lights(sys.argv[1])
 
     dev = glob.glob('/dev/cu.usbmodem*')[0]
     print("using device:", dev)

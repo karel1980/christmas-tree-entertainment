@@ -9,6 +9,8 @@ see their README.md files for more details
 
 ## Future ideas:
 
+- Implement 'snake' game
 - Add a bluetooth module for wireless control
 - Use a phone (accelerometer) for controlling the lights 
 - Use a controller 
+- Equalizer visuals (react to music (from microphone / mp3))
